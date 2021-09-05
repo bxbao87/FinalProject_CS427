@@ -21,29 +21,54 @@ public class ControlDisplayScene : MonoBehaviour
       return loadedObject;
     }
 
+    Dictionary<string, Vector3> scale = new Dictionary<string, Vector3>();
+    Dictionary<string, Vector3> Position = new Dictionary<string, Vector3>();
+    GameObject newObject;
     void Start(){
+        setup_dict();
+        var loadedPrefabResource = LoadPrefabFromFile(Name);
+        newObject = Instantiate(loadedPrefabResource,ModelWindow) as GameObject;
+        newObject.transform.localScale = scale[Name];    
+        newObject.transform.localPosition = Position[Name];
 
-    Debug.Log(Name);
-    var loadedPrefabResource = LoadPrefabFromFile(Name);
-    GameObject newObject = Instantiate(loadedPrefabResource,ModelWindow) as GameObject;
-    newObject.transform.localScale = new Vector3(300, 300, 300);    
+        /////////////////////////////////////////////////////////
 
-    /////////////////////////////////////////////////////////
+        string ReadFromFilePath = Application.streamingAssetsPath + "/Animal_Information/" + Name + ".txt";
+        List<string> filelines = File.ReadAllLines(ReadFromFilePath).ToList();
 
-    string ReadFromFilePath = Application.streamingAssetsPath + "/Animal_Information/" + Name + ".txt";
-    List<string> filelines = File.ReadAllLines(ReadFromFilePath).ToList();
+        TextObject.GetComponent<Text>().text = ""; // reset text objet
+        foreach(string line in filelines){
+            string s = TextObject.GetComponent<Text>().text;
+            TextObject.GetComponent<Text>().text = s + '\n' + line;
+        }
 
-    TextObject.GetComponent<Text>().text = ""; // reset text objet
-    foreach(string line in filelines){
-        string s = TextObject.GetComponent<Text>().text;
-        TextObject.GetComponent<Text>().text = s + '\n' + line;
+        ////////////////////////////////////////////////////////////
+
     }
-
-    }
-
     // Update is called once per frame
     void Update()
     {
+        newObject.transform.Rotate(new Vector3(0, 0.5f, 0));
+    }
+
+    void setup_dict(){
+        scale.Add(      "Wolf"                  , new Vector3(300, 300, 300));
+        Position.Add(   "Wolf"                  , new Vector3(0, 0, 0));
         
+        scale.Add(      "Stag"                  , new Vector3(70, 70, 90));
+        Position.Add(   "Stag"                  , new Vector3(0, 0, 0));
+
+        scale.Add(      "Hare"                  , new Vector3(500, 500, 500));
+        Position.Add(   "Hare"                  , new Vector3(0, 0, 0));
+
+        scale.Add(      "Rhino"                 , new Vector3(200, 200, 200));
+        Position.Add(   "Rhino"                 , new Vector3(0, 0, 0));
+
+        scale.Add(      "AfricanGiraffe"        , new Vector3(60, 60, 60));
+        Position.Add(   "AfricanGiraffe"        , new Vector3(0, -30, 0));
+
+        // scale.Add(      "Tiger"     , new Vector3(80, 80, 80));
+        // Rotate.Add(     "Tiger"     , new Vector3(0, 180, 0));
+        // Position.Add(   "Tiger"     , new Vector3(50, 50, -100));
     }
 }
