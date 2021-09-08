@@ -16,30 +16,42 @@ namespace NRKernal.NRExamples
     {
         /// <summary> The TrackingImage to visualize. </summary>
         public NRTrackableImage Image;
+        public GameObject cube;
 
         /// <summary>
         /// A model for the lower left corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameLowerLeft;
+        //public GameObject FrameLowerLeft;
 
         /// <summary>
         /// A model for the lower right corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameLowerRight;
+        //public GameObject FrameLowerRight;
 
         /// <summary>
         /// A model for the upper left corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameUpperLeft;
+        //public GameObject FrameUpperLeft;
 
         /// <summary>
         /// A model for the upper right corner of the frame to place when an image is detected. </summary>
-        public GameObject FrameUpperRight;
+        //public GameObject FrameUpperRight;
 
         /// <summary> The axis. </summary>
-        public GameObject Axis;
+        //public GameObject Axis;
 
         /// <summary> Updates this object. </summary>
         public void Update()
         {
-            if (Image == null || Image.GetTrackingState() != TrackingState.Tracking)
+            if (Image == null)
+			{
+                cube.SetActive(false);
+                return;
+			}
+
+            var center = Image.GetCenterPose();
+            transform.position = center.position;
+            transform.rotation = center.rotation;
+            cube.SetActive(true);
+
+            /*if (Image == null || Image.GetTrackingState() != TrackingState.Tracking)
             {
                 FrameLowerLeft.SetActive(false);
                 FrameLowerRight.SetActive(false);
@@ -64,7 +76,7 @@ namespace NRKernal.NRExamples
             FrameLowerRight.SetActive(true);
             FrameUpperLeft.SetActive(true);
             FrameUpperRight.SetActive(true);
-            Axis.SetActive(true);
+            Axis.SetActive(true);*/
         }
     }
 }
