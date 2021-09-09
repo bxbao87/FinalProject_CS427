@@ -3124,27 +3124,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cards:
   - CardName: Wolf
-    CardCharacter: {fileID: 0}
+    CardCharacter: {fileID: 21300000, guid: f55334b2d3935454fb635189ef75ea7c, type: 3}
     CardBackground: {fileID: 21300000, guid: 2bd0b2f8fbbb22844917a15d52802b88, type: 3}
     IsUnlocked: 1
   - CardName: Hare
-    CardCharacter: {fileID: 0}
+    CardCharacter: {fileID: 21300000, guid: e540b7ad2fed58e41b560129c9cdce94, type: 3}
     CardBackground: {fileID: 21300000, guid: 2bd0b2f8fbbb22844917a15d52802b88, type: 3}
     IsUnlocked: 1
   - CardName: Stag Deer
-    CardCharacter: {fileID: 0}
+    CardCharacter: {fileID: 21300000, guid: 69f24cdc892362e42abca866a18a52fe, type: 3}
     CardBackground: {fileID: 21300000, guid: 2bd0b2f8fbbb22844917a15d52802b88, type: 3}
     IsUnlocked: 1
   - CardName: Rhino
-    CardCharacter: {fileID: 0}
+    CardCharacter: {fileID: 21300000, guid: fa24bb7a0347956408612e2f4666f9b1, type: 3}
     CardBackground: {fileID: 21300000, guid: dc69d5f6afcd9164087edb3f017cff1a, type: 3}
     IsUnlocked: 1
   - CardName: Tiger
-    CardCharacter: {fileID: 0}
+    CardCharacter: {fileID: 21300000, guid: c39fc2d6dac297e4cb9a34bd888290a6, type: 3}
     CardBackground: {fileID: 21300000, guid: dc69d5f6afcd9164087edb3f017cff1a, type: 3}
     IsUnlocked: 1
   - CardName: Spider
-    CardCharacter: {fileID: 0}
+    CardCharacter: {fileID: 21300000, guid: 7c7fd62b4d270dd458c4e728978b92ee, type: 3}
     CardBackground: {fileID: 21300000, guid: dc69d5f6afcd9164087edb3f017cff1a, type: 3}
     IsUnlocked: 1
 --- !u!4 &2132388451
