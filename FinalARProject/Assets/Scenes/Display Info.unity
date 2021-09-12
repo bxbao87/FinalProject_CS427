@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb27df4fd588ef2a25e34b45060a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: AfricanGiraffe
+  Name: Hare
   ModelWindow: {fileID: 1851248962}
   TextObject: {fileID: 1639974420}
 --- !u!1 &1851248961
