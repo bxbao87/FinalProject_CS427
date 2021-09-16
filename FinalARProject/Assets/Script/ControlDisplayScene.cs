@@ -12,7 +12,7 @@ public class ControlDisplayScene : MonoBehaviour
     public Transform ModelWindow;
     public GameObject TextObject;
     
-    private UnityEngine.Object LoadPrefabFromFile(string filename){
+    public static UnityEngine.Object LoadPrefabFromFile(string filename){
       Debug.Log("Trying to load LevelPrefab from file ("+filename+ ")...");
       var loadedObject = Resources.Load(filename);
       if (loadedObject == null){
