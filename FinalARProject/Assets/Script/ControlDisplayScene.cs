@@ -8,7 +8,7 @@ using System;
 
 public class ControlDisplayScene : MonoBehaviour
 {
-    public string Name;
+    public string _Name;
     public Transform ModelWindow;
     public GameObject TextObject;
     
@@ -26,6 +26,8 @@ public class ControlDisplayScene : MonoBehaviour
     GameObject newObject;
     void Start(){
         setup_dict();
+        
+        string Name = PlayerPrefs.GetString("animal", Constant.foodChainCommon);
         var loadedPrefabResource = LoadPrefabFromFile(Name);
         newObject = Instantiate(loadedPrefabResource,ModelWindow) as GameObject;
         newObject.transform.localScale = scale[Name];    
@@ -43,12 +45,13 @@ public class ControlDisplayScene : MonoBehaviour
         }
 
         ////////////////////////////////////////////////////////////
-
+        
     }
     // Update is called once per frame
     void Update()
     {
         newObject.transform.Rotate(new Vector3(0, 0.5f, 0));
+        //newObject.transform.RotateAround(newObject.transform.position, newObject.transform.up, Time.deltaTime * 90f);
     }
 
     void setup_dict(){

@@ -1,13 +1,13 @@
 									Spider
 									
-General: Spiders (order Araneae) are air-breathing arthropods that have eight legs, chelicerae with fangs generally able to inject venom, and spinnerets that extrude silk
++ GENERAL: Spiders (order Araneae) are air-breathing arthropods that have eight legs, chelicerae with fangs generally able to inject venom, and spinnerets that extrude silk
 
-Location: Spiders are found worldwide on every continent except for Antarctica, and have become established in nearly every habitat with the exceptions of air and sea colonization.
++ LOCATION: Spiders are found worldwide on every continent except for Antarctica, and have become established in nearly every habitat with the exceptions of air and sea colonization.
 
-Appearance: They have two body parts: a prosoma (cephalothorax) and an abdomen. They have eight legs, unless they've lost any in an accident or fight. They have several eyes which are usually tiny. Jumping spiders and wolf spiders have larger eyes relative to their body size.They have spinnerets on their tail ends to release and control gossamer. They have fangs and chelicerae to eat with.
++ APPEARANCE: They have two body parts: a prosoma (cephalothorax) and an abdomen. They have eight legs, unless they've lost any in an accident or fight. They have several eyes which are usually tiny. Jumping spiders and wolf spiders have larger eyes relative to their body size.They have spinnerets on their tail ends to release and control gossamer. They have fangs and chelicerae to eat with.
 
-reproduction: Spiders reproduce sexually, however the male's sperm is not inserted into the female's body from within the male's genitals. ... If courtship is successful, the male injects his sperm from his palps into the female's genital opening, known as the epigyne, on the underside of her abdomen.
++ REPRODUCTION: Spiders reproduce sexually, however the male's sperm is not inserted into the female's body from within the male's genitals. ... If courtship is successful, the male injects his sperm from his palps into the female's genital opening, known as the epigyne, on the underside of her abdomen.
 
-Eating: While spiders feast primarily on insects, some large spiders have been known to eat worms, snails, and even small vertebrates like frogs, lizards, birds, and bats.
++ EATING: While spiders feast primarily on insects, some large spiders have been known to eat worms, snails, and even small vertebrates like frogs, lizards, birds, and bats.
 
-Life: Although spiders are generally regarded as predatory, the jumping spider Bagheera kiplingi gets over 90% of its food from fairly solid plant material produced by acacias as part of a mutually beneficial relationship with a species of ant. The best-known method of prey capture is by means of sticky webs. Varying placement of webs allows different species of spider to trap different insects in the same area, 
++ LIFE: Although spiders are generally regarded as predatory, the jumping spider Bagheera kiplingi gets over 90% of its food from fairly solid plant material produced by acacias as part of a mutually beneficial relationship with a species of ant. The best-known method of prey capture is by means of sticky webs. Varying placement of webs allows different species of spider to trap different insects in the same area, 
