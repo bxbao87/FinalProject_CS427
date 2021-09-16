@@ -67,8 +67,10 @@ public class ControlDisplayScene : MonoBehaviour
         scale.Add(      "AfricanGiraffe"        , new Vector3(60, 60, 60));
         Position.Add(   "AfricanGiraffe"        , new Vector3(0, -30, 0));
 
-        // scale.Add(      "Tiger"     , new Vector3(80, 80, 80));
-        // Rotate.Add(     "Tiger"     , new Vector3(0, 180, 0));
-        // Position.Add(   "Tiger"     , new Vector3(50, 50, -100));
+        scale.Add(      "Spider"                , new Vector3(20, 20, 20));
+        Position.Add(   "Spider"                , new Vector3(0, 30, 0));
+
+        scale.Add(      "Tiger"                 , new Vector3(60, 60, 60));
+        Position.Add(   "Tiger"                 , new Vector3(50, 50, -100));
     }
 }
