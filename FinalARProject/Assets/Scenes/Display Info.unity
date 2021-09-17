@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,11 +157,11 @@ RectTransform:
   m_Father: {fileID: 1710576016}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 194.16077, y: 0}
-  m_SizeDelta: {x: -388.3215, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -411.67847, y: 0}
+  m_SizeDelta: {x: 411.67847, y: 0}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &137410959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,10 +437,10 @@ RectTransform:
   m_Father: {fileID: 1482656222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 199.16998, y: -167.739}
-  m_SizeDelta: {x: -398.66, y: 640.517}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -6.830002, y: 0.0009765625}
+  m_SizeDelta: {x: 13.660004, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859824906
 MonoBehaviour:
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1482487776}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.19212222
+  m_Size: 0.3074821
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -759,8 +759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00073947, y: 76}
-  m_SizeDelta: {x: 411.68, y: 305.04}
+  m_AnchoredPosition: {x: 0.0007324219, y: 0.0015144}
+  m_SizeDelta: {x: 411.68, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482656223
 MonoBehaviour:
@@ -837,10 +837,10 @@ RectTransform:
   m_Father: {fileID: 1482656222}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.6679, y: -641.3496}
-  m_SizeDelta: {x: 398.34, y: 1587.7393}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 199.33209, y: -731.75}
+  m_SizeDelta: {x: 398.34, y: 1463.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639974422
 MonoBehaviour:
@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb27df4fd588ef2a25e34b45060a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Name: 
+  _Name: Wolf
   ModelWindow: {fileID: 1851248962}
   TextObject: {fileID: 1639974420}
 --- !u!1 &1851248961
