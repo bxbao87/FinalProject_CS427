@@ -64,12 +64,13 @@ public class TimerCountDown : MonoBehaviour
     public void restartGame()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("GamePlay");
+        loadScene("GamePlay");
     }
 
     public void backMenu()
     {
         Time.timeScale = 1;
+        loadScene("Main Menu");
     }
 
     public void gameOver()
@@ -84,5 +85,10 @@ public class TimerCountDown : MonoBehaviour
         canvasGameOver.SetActive(true);
         Text gameOver = canvasGameOver.transform.Find("GameOver").GetComponent<Text>();
         gameOver.text = Constant.gameCompleted;
+    }
+
+    private void loadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

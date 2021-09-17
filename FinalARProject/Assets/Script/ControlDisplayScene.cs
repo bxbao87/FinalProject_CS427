@@ -27,10 +27,10 @@ public class ControlDisplayScene : MonoBehaviour
     void Start(){
         setup_dict();
         
-        string Name = PlayerPrefs.GetString("animal", Constant.foodChainCommon);
+        string Name = PlayerPrefs.GetString(Constant.prefAnimal, Constant.foodChainCommon);
         var loadedPrefabResource = LoadPrefabFromFile(Name);
         newObject = Instantiate(loadedPrefabResource,ModelWindow) as GameObject;
-        newObject.transform.localScale = scale[Name];    
+        newObject.transform.localScale = scale[Name] * 0.9f;    
         newObject.transform.localPosition = Position[Name];
 
         /////////////////////////////////////////////////////////

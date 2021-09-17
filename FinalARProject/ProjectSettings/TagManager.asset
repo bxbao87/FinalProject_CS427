@@ -7,6 +7,9 @@ TagManager:
   - food
   - die
   - land
+  - play
+  - detail
+  - filter
   layers:
   - Default
   - TransparentFX

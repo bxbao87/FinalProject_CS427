@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 2252902650349345022}
   - component: {fileID: 7997218983410717309}
   - component: {fileID: 6462412054354884197}
+  - component: {fileID: 6013759339810388780}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -241,8 +242,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.20541632, y: 0.49864635, z: 0.6418111}
-  m_Center: {x: -0.006704112, y: 0.25067693, z: 0.07880068}
+  m_Size: {x: 0.20541632, y: 0.107045375, z: 0.8670211}
+  m_Center: {x: -0.006704112, y: 0.5332663, z: 0.023718596}
 --- !u!54 &6462412054354884197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -259,6 +260,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6013759339810388780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775660393807474495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21619034, y: 0.48010892, z: 0.3591939}
+  m_Center: {x: -0.009754896, y: 0.23614559, z: 0.4260212}
 --- !u!1 &850559587113813075
 GameObject:
   m_ObjectHideFlags: 0

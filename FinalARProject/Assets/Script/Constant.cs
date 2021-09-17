@@ -14,8 +14,12 @@ public class Constant : MonoBehaviour
         {"AfricanGiraffe", "Bush" }
     };
 
-    public static string foodChainCommon = "Hare";
-    public static string gameCompleted = "GAME COMPLETED";
+    public const string foodChainCommon = "Hare";
+    public const string gameCompleted = "GAME COMPLETED";
 
+    public const string filter = "filter";
+    public const string detail = "detail";
+    public const string play = "play";
 
+    public const string prefAnimal = "animal";
 }

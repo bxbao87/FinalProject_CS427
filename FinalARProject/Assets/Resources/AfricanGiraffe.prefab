@@ -846,6 +846,7 @@ GameObject:
   - component: {fileID: 3035538568137375280}
   - component: {fileID: 189420293466490355}
   - component: {fileID: 442417258320200228}
+  - component: {fileID: 7125148341861115380}
   m_Layer: 0
   m_Name: AfricanGiraffe
   m_TagString: Untagged
@@ -915,8 +916,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9198872, y: 2.817135, z: 1.718539}
-  m_Center: {x: 0.24400552, y: 1.4085675, z: -0.6500425}
+  m_Size: {x: 0.9198872, y: 2.1466448, z: 1.718539}
+  m_Center: {x: 0.24400552, y: 3.3233438, z: -0.6500425}
 --- !u!54 &442417258320200228
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -933,6 +934,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7125148341861115380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782772740911815383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5208684, y: 2.2957554, z: 1.7125988}
+  m_Center: {x: 0.30645594, y: 1.110034, z: 0.5347972}
 --- !u!1 &4782772741009451232
 GameObject:
   m_ObjectHideFlags: 0

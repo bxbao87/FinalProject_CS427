@@ -1498,6 +1498,7 @@ GameObject:
   - component: {fileID: 2535303078539155167}
   - component: {fileID: 1210217165678636164}
   - component: {fileID: 4229757360207806631}
+  - component: {fileID: 8020027634856486882}
   m_Layer: 0
   m_Name: Rhino
   m_TagString: Untagged
@@ -1568,8 +1569,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.49564624, y: 1, z: 1.2657316}
-  m_Center: {x: 0, y: 0.5, z: 0.14431036}
+  m_Size: {x: 0.49564624, y: 0.27978122, z: 1.4173968}
+  m_Center: {x: 0, y: 0.5729311, z: 0.22014311}
 --- !u!54 &4229757360207806631
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1586,6 +1587,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8020027634856486882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050934033576698123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.47829083, y: 0.44525635, z: 0.48584968}
+  m_Center: {x: 0.0063877255, y: 0.19652751, z: 0.68635523}
 --- !u!1 &6077673161224421471
 GameObject:
   m_ObjectHideFlags: 0

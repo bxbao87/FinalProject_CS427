@@ -1187,6 +1187,7 @@ GameObject:
   - component: {fileID: 5011351398442952428}
   - component: {fileID: 4839255336274595275}
   - component: {fileID: 7639243840179298601}
+  - component: {fileID: 6014619573321843241}
   m_Layer: 0
   m_Name: Tiger
   m_TagString: Untagged
@@ -1256,8 +1257,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.55156046, y: 0.9056651, z: 1.8751158}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 0.5515605, y: 0.18390465, z: 2.0571456}
+  m_Center: {x: 0, y: 0.9762335, z: -0.023982923}
 --- !u!54 &7639243840179298601
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1274,6 +1275,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6014619573321843241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517966022563130677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5695077, y: 0.85722566, z: 0.9029696}
+  m_Center: {x: -0.004773458, y: 0.45381725, z: 1.0333742}
 --- !u!1 &5555089674276196271
 GameObject:
   m_ObjectHideFlags: 0
