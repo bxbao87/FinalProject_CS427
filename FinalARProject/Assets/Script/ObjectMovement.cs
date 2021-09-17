@@ -95,12 +95,8 @@ public class ObjectMovement : MonoBehaviour
             yield return new WaitForSeconds(delay);
 
             otherObj.SetActive(false);
-            isEating = false;
         }
-        else
-        {
-            isEating = true;
-        }
+        isEating = false;
     }
 
     private void EndGame()
