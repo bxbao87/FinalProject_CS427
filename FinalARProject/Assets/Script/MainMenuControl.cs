@@ -25,6 +25,7 @@ public class MainMenuControl : MonoBehaviour
 
     public void loadScene(string sceneName)
     {
+        PlayerPrefs.SetString(Constant.prefPrevScene, Constant.menu);
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -22,4 +22,7 @@ public class Constant : MonoBehaviour
     public const string play = "play";
 
     public const string prefAnimal = "animal";
+    public const string prefPrevScene = "prevSceneName";
+
+    public const string menu = "Main Menu";
 }

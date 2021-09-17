@@ -5,19 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class AndroidBackButton : MonoBehaviour
 {
+    string sceneName;
+    string menu;
+
+    private void Start()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
+        menu = Constant.menu;
+    }
+    
     void Update()
     {
-        // Make sure user is on Android platform
+        // on Android platform
         if (Application.platform == RuntimePlatform.Android)
         {
-
-            // Check if Back was pressed this frame
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-
-                // Quit the application
-                Application.Quit();
+                if(sceneName != menu)
+                {
+                    backBtn();
+                }
+                else
+                {
+                    Application.Quit();
+                }
             }
         }
+    }
+
+    public void backBtn()
+    {
+        string scene = PlayerPrefs.GetString(Constant.prefPrevScene, menu);
+        SceneManager.LoadScene(scene);
     }
 }
