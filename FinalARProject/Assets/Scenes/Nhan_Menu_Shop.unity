@@ -1669,6 +1669,14 @@ PrefabInstance:
       value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2077,6 +2085,14 @@ PrefabInstance:
     - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
       propertyPath: m_SizeDelta.y
       value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6219,6 +6235,14 @@ PrefabInstance:
       value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6784,7 +6808,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1236696947}
   m_Direction: 2
   m_Value: 0.9999555
-  m_Size: 0.44428104
+  m_Size: 0.444281
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6941,6 +6965,14 @@ PrefabInstance:
     - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
       propertyPath: m_SizeDelta.y
       value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6515236772863464869, guid: db502d05769c362408d4a331fc27fa45, type: 3}
       propertyPath: m_LocalPosition.x
