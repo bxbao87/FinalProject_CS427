@@ -13,7 +13,7 @@ public class PlaneStopTracking : MonoBehaviour
     ARRaycastManager raycastManager;
 
     [SerializeField]
-    double desiredArea = 3;
+    double desiredArea = 1.5;
     private double halfSize = 0;
 
     public ARPlane standPlane;
@@ -23,6 +23,9 @@ public class PlaneStopTracking : MonoBehaviour
 
     [SerializeField]
     GameObject infoGroup;
+
+    [SerializeField]
+    float scaleFactor = 0.1f;
 
     void Start()
     {
@@ -114,7 +117,7 @@ public class PlaneStopTracking : MonoBehaviour
         var obj = GameObject.Instantiate(prefab);
         obj.transform.position = pos;
         Vector3 scaleVec = obj.transform.localScale;
-        scaleVec *= 0.15f;
+        scaleVec *= scaleFactor;
         obj.transform.localScale = scaleVec;
         
         ObjectMovement movementScript = obj.GetComponent<ObjectMovement>();

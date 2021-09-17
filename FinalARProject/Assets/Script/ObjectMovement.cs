@@ -78,7 +78,7 @@ public class ObjectMovement : MonoBehaviour
             isEating = true;
             isWalking = false;
             anim.SetTrigger("eating");
-            StartCoroutine(Eating(otherObj));
+            StartCoroutine(Eating(anim.GetCurrentAnimatorStateInfo(0).length, otherObj));
         }
         else if (otherObj.CompareTag("die"))
         {
@@ -86,15 +86,20 @@ public class ObjectMovement : MonoBehaviour
         }
     }
 
-    IEnumerator Eating(GameObject otherObj = null)
+    IEnumerator Eating(float delay, GameObject otherObj = null)
     {
         if (otherObj != null)
         {
-            float delay = anim.GetCurrentAnimatorStateInfo(0).length;
+            if (delay < 2)
+                delay = 2;
             yield return new WaitForSeconds(delay);
 
             otherObj.SetActive(false);
             isEating = false;
+        }
+        else
+        {
+            isEating = true;
         }
     }
 

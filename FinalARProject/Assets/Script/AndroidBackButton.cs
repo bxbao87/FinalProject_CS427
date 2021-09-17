@@ -21,11 +21,7 @@ public class AndroidBackButton : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if(sceneName != menu)
-                {
-                    backBtn();
-                }
-                else
+                if(sceneName == menu)
                 {
                     Application.Quit();
                 }
@@ -33,9 +29,10 @@ public class AndroidBackButton : MonoBehaviour
         }
     }
 
-    public void backBtn()
+    public void backBtn(string scene)
     {
-        string scene = PlayerPrefs.GetString(Constant.prefPrevScene, menu);
+        if (scene == null || scene == "")
+            scene = Constant.menu;
         SceneManager.LoadScene(scene);
     }
 }

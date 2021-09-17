@@ -25,6 +25,7 @@ public class TimerCountDown : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         timeLeft = duration;
         countDownText.text = timeLeft.ToString("0");
     }
@@ -64,7 +65,7 @@ public class TimerCountDown : MonoBehaviour
     public void restartGame()
     {
         Time.timeScale = 1;
-        loadScene("GamePlay");
+        SceneManager.LoadScene("GamePlay"); // reload current scene
     }
 
     public void backMenu()

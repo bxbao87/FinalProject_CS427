@@ -10,7 +10,7 @@ public class MeteorSpawn : MonoBehaviour
     public PlaneStopTracking planeStopTracking;
 
     [SerializeField]
-    int t1=1, t2=10;
+    int t1=5, t2=10;
 
 
     void Start()
