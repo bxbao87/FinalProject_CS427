@@ -70,7 +70,7 @@ public class TimerCountDown : MonoBehaviour
     public void backMenu()
     {
         Time.timeScale = 1;
-        loadScene("Main Menu");
+        loadScene(Constant.menu);
     }
 
     public void gameOver()

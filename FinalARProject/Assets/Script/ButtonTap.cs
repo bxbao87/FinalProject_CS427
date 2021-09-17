@@ -22,6 +22,7 @@ public class ButtonTap : MonoBehaviour, IPointerDownHandler
 
     private void loadScene(string sceneName)
     {
+        PlayerPrefs.SetString(Constant.prefPrevScene, SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(sceneName);
     }
 
