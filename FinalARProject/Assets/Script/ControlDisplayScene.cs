@@ -13,7 +13,7 @@ public class ControlDisplayScene : MonoBehaviour
     public GameObject TextObject;
     
     public static UnityEngine.Object LoadPrefabFromFile(string filename){
-      Debug.Log("Trying to load LevelPrefab from file ("+filename+ ")...");
+    //   Debug.Log("Trying to load LevelPrefab from file ("+filename+ ")...");
       var loadedObject = Resources.Load(filename);
       if (loadedObject == null){
           throw new FileNotFoundException("...no file found - please check the configuration");
@@ -34,15 +34,10 @@ public class ControlDisplayScene : MonoBehaviour
         newObject.transform.localPosition = Position[Name];
 
         /////////////////////////////////////////////////////////
+        var filelines = Resources.Load<TextAsset>("Animal_infomation/"+Name).ToString();
 
-        string ReadFromFilePath = Application.streamingAssetsPath + "/Animal_Information/" + Name + ".txt";
-        List<string> filelines = File.ReadAllLines(ReadFromFilePath).ToList();
+        TextObject.GetComponent<Text>().text = filelines; // reset text objet
 
-        TextObject.GetComponent<Text>().text = ""; // reset text objet
-        foreach(string line in filelines){
-            string s = TextObject.GetComponent<Text>().text;
-            TextObject.GetComponent<Text>().text = s + '\n' + line;
-        }
 
         ////////////////////////////////////////////////////////////
         
