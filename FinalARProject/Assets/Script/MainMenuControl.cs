@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControl : MonoBehaviour
 {
+    public GameObject Sound_object;
+    /*
+        //dùng cái này để check có dùng nhạc hay không
+        string ok = "True";
+        if (Sound_object.activeSelf) ok = "True";
+        else ok = "False";
+    */
+
     public void Exit(){
         Application.Quit();
     }
@@ -27,5 +35,9 @@ public class MainMenuControl : MonoBehaviour
     {
         PlayerPrefs.SetString(Constant.prefPrevScene, Constant.menu);
         SceneManager.LoadScene(sceneName);
+    }
+
+    void Update(){
+
     }
 }

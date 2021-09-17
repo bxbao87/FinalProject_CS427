@@ -11,6 +11,10 @@ public class ControlDisplayScene : MonoBehaviour
     public string _Name;
     public Transform ModelWindow;
     public GameObject TextObject;
+    public AudioSource audioSource;
+    public string Music;
+    AudioClip clip;
+    float timer = 0.0f;
     
     public static UnityEngine.Object LoadPrefabFromFile(string filename){
     //   Debug.Log("Trying to load LevelPrefab from file ("+filename+ ")...");
@@ -40,13 +44,29 @@ public class ControlDisplayScene : MonoBehaviour
 
 
         ////////////////////////////////////////////////////////////
+        clip = Resources.Load<AudioClip>("Sound/" + Name);
+        if (clip == null) Debug.Log("null clip");
+        if (clip != null && Music == "True") audioSource.PlayOneShot(clip,1.0f);
+        
+
+        ////////////////////////////////////////////////////////////
         
     }
     // Update is called once per frame
     void Update()
     {
         newObject.transform.Rotate(new Vector3(0, 0.5f, 0));
-        //newObject.transform.RotateAround(newObject.transform.position, newObject.transform.up, Time.deltaTime * 90f);
+
+        if (clip != null) {
+            timer += Time.deltaTime;
+
+            if (timer > clip.length-2 && Music == "True"){
+                audioSource.PlayOneShot(clip,1.0f);
+                timer = 0;
+            }
+        }
+
+
     }
 
     void setup_dict(){
