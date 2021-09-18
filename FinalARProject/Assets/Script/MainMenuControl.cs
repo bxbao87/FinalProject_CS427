@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControl : MonoBehaviour
 {
+
     public void Exit(){
         Application.Quit();
     }
@@ -27,5 +28,9 @@ public class MainMenuControl : MonoBehaviour
     {
         PlayerPrefs.SetString(Constant.prefPrevScene, Constant.menu);
         SceneManager.LoadScene(sceneName);
+    }
+
+    void Update(){
+
     }
 }
