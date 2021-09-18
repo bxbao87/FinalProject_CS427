@@ -25,4 +25,10 @@ public class Constant : MonoBehaviour
     public const string prefPrevScene = "prevSceneName";
 
     public const string menu = "Main Menu";
+    public const string multitrackScene = "Multi_Track";
+    public const string viewDetailScene = "Display Info";
+    public const string filterScene = "Filter_Deer";
+    public const string gamePlayScene = "GamePlay";
+    public const string galleryScene = "Nhan_Menu_Shop";
+
 }

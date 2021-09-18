@@ -23,13 +23,13 @@ public class ObjectMovement : MonoBehaviour
     bool isEating = false;
     private TimerCountDown timerCountDown;
 
-    private Vector3 appliedRot;
+    private Quaternion appliedRot;
     void Start()
     {
         //raycastManager = GetComponent<ARRaycastManager>();
         anim = GetComponent<Animator>();
         timerCountDown = GameObject.Find("TimerCountDown").GetComponent<TimerCountDown>();
-        appliedRot = transform.rotation.eulerAngles;
+        appliedRot = Quaternion.Euler(transform.rotation.eulerAngles);
     }
 
     void Update()
@@ -52,7 +52,7 @@ public class ObjectMovement : MonoBehaviour
                 if (Vector3.Distance(followedPos, curPos) > 0.1)
                 {
                     Quaternion lookRot = Quaternion.LookRotation((followedPos - curPos));
-                    lookRot *= Quaternion.Euler(appliedRot);
+                    lookRot *= appliedRot;
                     transform.rotation = Quaternion.Lerp(transform.rotation, lookRot, Time.deltaTime * timeFactor);
                     transform.position = Vector3.MoveTowards(curPos, followedPos, Time.deltaTime * speed);
                     isWalking = true;

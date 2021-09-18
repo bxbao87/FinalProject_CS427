@@ -35,4 +35,10 @@ public class AndroidBackButton : MonoBehaviour
             scene = Constant.menu;
         SceneManager.LoadScene(scene);
     }
+
+    public void filterBackBtn(string scene)
+    {
+        Screen.orientation = ScreenOrientation.LandscapeRight;
+        backBtn(scene);
+    }
 }

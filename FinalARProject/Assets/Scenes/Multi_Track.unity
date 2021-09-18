@@ -479,7 +479,7 @@ MonoBehaviour:
   - {fileID: 8622616858910099556, guid: d3e1f590816fa894cbfb6e1caee25d5f, type: 3}
   - {fileID: 775660393807474495, guid: a0eaada576bc9d54bbaedd92df7859e3, type: 3}
   buttonPrefab: {fileID: 3855430404947242978, guid: 733bd8b600cc4dc4b8fc288d52f57e35, type: 3}
-  scaleFactor: 0.07
+  scaleFactor: 0.05
   btnScaleFactor: 0.07
 --- !u!114 &560545821
 MonoBehaviour:

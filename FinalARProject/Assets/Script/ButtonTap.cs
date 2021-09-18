@@ -57,15 +57,15 @@ public class ButtonTap : MonoBehaviour, IPointerDownHandler
 
                 if (objTag == detail)
                 {
-                    loadScene("Display Info");
+                    loadScene(Constant.viewDetailScene);
                 }
                 else if (objTag == filter)
                 {
-
+                    loadScene(Constant.filterScene);
                 }
                 else if (objTag == play)
                 {
-                    loadScene("GamePlay");
+                    loadScene(Constant.gamePlayScene);
                 }
             }
         }

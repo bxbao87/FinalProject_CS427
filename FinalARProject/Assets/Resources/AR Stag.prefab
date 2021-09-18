@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 759344051458507274}
   - component: {fileID: 892077204039233056}
   m_Layer: 0
-  m_Name: AR Deer
+  m_Name: AR Stag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

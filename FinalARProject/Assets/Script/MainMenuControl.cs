@@ -12,14 +12,14 @@ public class MainMenuControl : MonoBehaviour
     public void GalleryScene(string sceneName)
     {
         if (sceneName == null || sceneName == "")
-            sceneName = "Nhan_Menu_Shop";
+            sceneName = Constant.galleryScene;
         loadScene(sceneName);
     }
 
     public void StartScene(string sceneName)
     {
         if (sceneName == null || sceneName == "")
-            sceneName = "Multi_Track";
+            sceneName = Constant.multitrackScene;
         loadScene(sceneName);
     }
 
