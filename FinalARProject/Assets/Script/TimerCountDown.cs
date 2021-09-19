@@ -43,7 +43,8 @@ public class TimerCountDown : MonoBehaviour
             if (themeClip == null) Debug.Log("null clip");
             if (themeClip != null)
             {
-                audioSource.PlayOneShot(themeClip, 1.0f);
+                audioSource.clip = themeClip;
+                audioSource.Play();
                 audioSource.loop = true;
             }
         }
