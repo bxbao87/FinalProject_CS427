@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GalleryAudioSource : MonoBehaviour
 {
-    public string isplay;
     public AudioSource audioSource;
-    // Start is called before the first frame update
+
     void Start()
     {
-        if (isplay == "True"){
+        string isPlay = PlayerPrefs.GetString(Constant.prefMusic, "True");
+        if (isPlay == "True"){
             audioSource.Play();
         }
     }

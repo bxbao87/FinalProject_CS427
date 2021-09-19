@@ -23,6 +23,8 @@ public class Constant : MonoBehaviour
 
     public const string prefAnimal = "animal";
     public const string prefPrevScene = "prevSceneName";
+    public const string prefMusic = "music";
+    public const string prefSound = "sound";
 
     public const string menu = "Main Menu";
     public const string multitrackScene = "Multi_Track";
