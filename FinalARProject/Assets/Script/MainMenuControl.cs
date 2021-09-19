@@ -30,7 +30,4 @@ public class MainMenuControl : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    void Update(){
-
-    }
 }

@@ -10,9 +10,10 @@ public class FaceMaskChange : MonoBehaviour
     ARFaceManager faceManager;
 
     public AudioSource audioSource;
-    public string sound;
-    AudioClip clip;
+    AudioClip clip = null;
     float timer = 0.0f;
+
+    private bool isSoundMute = false;
 
     void Awake()
     {
@@ -22,9 +23,18 @@ public class FaceMaskChange : MonoBehaviour
         var loadedPrefabResource = ControlDisplayScene.LoadPrefabFromFile("AR " + Name);
         faceManager.facePrefab = Instantiate(loadedPrefabResource) as GameObject;
 
-        clip = Resources.Load<AudioClip>("Sound/" + Name);
-        if (clip == null) Debug.Log("null clip");
-        if (clip != null && sound == "True") audioSource.PlayOneShot(clip, 1.0f);
+
+        isSoundMute = PlayerPrefs.GetString(Constant.prefSound, "True") == "True" ? false : true;
+        if (!isSoundMute)
+        {
+            clip = Resources.Load<AudioClip>("Sound/" + Name);
+            if (clip == null) Debug.Log("null clip");
+            if (clip != null)
+            {
+                audioSource.PlayOneShot(clip, 1.0f);
+                audioSource.loop = true;
+            }
+        }
     }
 
     private void Update()
@@ -33,7 +43,7 @@ public class FaceMaskChange : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > clip.length - 2 && sound == "True")
+            if (timer > clip.length - 2)
             {
                 audioSource.PlayOneShot(clip, 1.0f);
                 timer = 0;

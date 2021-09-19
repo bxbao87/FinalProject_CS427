@@ -9,9 +9,9 @@ public class FoodSpawn : MonoBehaviour
     public GameObject foodObject;
     private GameObject curObject;
 
-    [SerializeField]
-    GameObject reticlePrefab;
-    private GameObject reticle;
+    //[SerializeField]
+    //GameObject reticlePrefab;
+    //private GameObject reticle;
     public PlaneStopTracking planeStopTrackingScript;
     public int foodEatten = 30;
 
@@ -53,8 +53,8 @@ public class FoodSpawn : MonoBehaviour
                 }
                 Vector3 newPos = randomPosition(standPlane);
                 curObject.transform.position = newPos;
-                newPos.y += 3;
-                reticle.transform.position = newPos;
+                //newPos.y += 3;
+                //reticle.transform.position = newPos;
             }
 
             var foodPosition = curObject.transform.position;
@@ -99,11 +99,11 @@ public class FoodSpawn : MonoBehaviour
         tmp.transform.position = newPos;
         curObject = tmp;
 
-        var reti = GameObject.Instantiate(reticlePrefab);
-        newPos.y += 3;
-        reti.transform.position = newPos;
-        reti.transform.localScale = reti.transform.localScale * scaleFactor;
-        reticle = reti;
+        //var reti = GameObject.Instantiate(reticlePrefab);
+        //newPos.y += 3;
+        //reti.transform.position = newPos;
+        //reti.transform.localScale = reti.transform.localScale * scaleFactor;
+        //reticle = reti;
     }
 
 }

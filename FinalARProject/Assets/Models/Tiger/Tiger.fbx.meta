@@ -24,6 +24,9 @@ ModelImporter:
   - first:
       74: -6888193597380953137
     second: Walk Fast
+  - first:
+      74: 9195579328111842539
+    second: Howl (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -142,8 +145,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

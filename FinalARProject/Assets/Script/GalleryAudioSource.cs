@@ -11,6 +11,11 @@ public class GalleryAudioSource : MonoBehaviour
         string isPlay = PlayerPrefs.GetString(Constant.prefMusic, "True");
         if (isPlay == "True"){
             audioSource.Play();
+            audioSource.loop = true;
+        }
+        else
+        {
+            audioSource.Stop();
         }
     }
 

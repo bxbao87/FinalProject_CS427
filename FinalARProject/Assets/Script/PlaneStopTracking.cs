@@ -178,5 +178,10 @@ public class PlaneStopTracking : MonoBehaviour
         {
             plane.gameObject.SetActive(false);
         }
+
+        foreach (var plane in args.updated)
+        {
+
+        }
     }
 }

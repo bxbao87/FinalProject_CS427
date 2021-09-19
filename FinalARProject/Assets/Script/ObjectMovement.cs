@@ -24,12 +24,14 @@ public class ObjectMovement : MonoBehaviour
     private TimerCountDown timerCountDown;
 
     private Quaternion appliedRot;
+
     void Start()
     {
         //raycastManager = GetComponent<ARRaycastManager>();
         anim = GetComponent<Animator>();
         timerCountDown = GameObject.Find("TimerCountDown").GetComponent<TimerCountDown>();
         appliedRot = Quaternion.Euler(transform.rotation.eulerAngles);
+
     }
 
     void Update()
@@ -75,7 +77,6 @@ public class ObjectMovement : MonoBehaviour
 
         if (otherObj.CompareTag("food"))
         {
-            isEating = true;
             isWalking = false;
             anim.SetTrigger("eating");
             StartCoroutine(Eating(anim.GetCurrentAnimatorStateInfo(0).length, otherObj));
@@ -90,12 +91,12 @@ public class ObjectMovement : MonoBehaviour
     {
         if (otherObj != null)
         {
+            isEating = true;
             if (delay < 2)
                 delay = 2;
             yield return new WaitForSeconds(delay);
-
-            otherObj.SetActive(false);
         }
+        otherObj.SetActive(false);
         isEating = false;
     }
 

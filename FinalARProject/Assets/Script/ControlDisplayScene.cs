@@ -12,9 +12,9 @@ public class ControlDisplayScene : MonoBehaviour
     public Transform ModelWindow;
     public GameObject TextObject;
     public AudioSource audioSource;
-    public string Music;
-    AudioClip clip;
+    AudioClip clip = null;
     float timer = 0.0f;
+    bool isSoundMute = false;
     
     public static UnityEngine.Object LoadPrefabFromFile(string filename){
     //   Debug.Log("Trying to load LevelPrefab from file ("+filename+ ")...");
@@ -44,13 +44,18 @@ public class ControlDisplayScene : MonoBehaviour
 
 
         ////////////////////////////////////////////////////////////
-        clip = Resources.Load<AudioClip>("Sound/" + Name);
-        if (clip == null) Debug.Log("null clip");
-        if (clip != null && Music == "True") audioSource.PlayOneShot(clip,1.0f);
-        
+        isSoundMute = PlayerPrefs.GetString(Constant.prefSound, "True") == "True" ? false : true;
+        if (!isSoundMute)
+        {
+            clip = Resources.Load<AudioClip>("Sound/" + Name);
+            audioSource.loop = true;
+            if (clip == null) Debug.Log("null clip");
+            if (clip != null) audioSource.PlayOneShot(clip, 1.0f);
+            audioSource.loop = true;
+        }
 
         ////////////////////////////////////////////////////////////
-        
+
     }
     // Update is called once per frame
     void Update()
@@ -60,7 +65,7 @@ public class ControlDisplayScene : MonoBehaviour
         if (clip != null) {
             timer += Time.deltaTime;
 
-            if (timer > clip.length-2 && Music == "True"){
+            if (timer > clip.length-2){
                 audioSource.PlayOneShot(clip,1.0f);
                 timer = 0;
             }

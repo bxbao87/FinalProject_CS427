@@ -1185,7 +1185,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1351,18 +1351,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Welcome to Filter
-
-
-    Please show your pretty face in front of the front
-    camera to have some selfie picutres with animal masks.
-
-
-    Tap the round button
-    to take a shot. The image is automatically stored in your phone''s photo gallery
-    app.
-
-'
+  m_Text: "Welcome to Filter\n\n Please show your pretty face in front of the front
+    camera to have some selfie picutres with animal masks. \n\n Tap the round button
+    to take a shot. The image is automatically stored in your phone's photo gallery
+    app. \n"
 --- !u!222 &895502755
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1855,4 +1847,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceManager: {fileID: 1682321324}
   audioSource: {fileID: 834968249}
-  sound: True

@@ -23,11 +23,31 @@ public class TimerCountDown : MonoBehaviour
     [SerializeField]
     PlaneStopTracking planeStopTracking;
 
+    public AudioSource audioSource;
+    [SerializeField]
+    AudioClip victoryClip, loseClip;
+    private AudioClip themeClip;
+    private bool isMusicMute = true;
+
     void Start()
     {
         Time.timeScale = 1;
         timeLeft = duration;
         countDownText.text = timeLeft.ToString("0");
+        isMusicMute = PlayerPrefs.GetString(Constant.prefMusic, "True") == "True" ? false : true;
+
+        string Name = PlayerPrefs.GetString(Constant.prefAnimal, Constant.foodChainCommon);
+        if (!isMusicMute)
+        {
+            themeClip = Resources.Load<AudioClip>("Sound/" + Name);
+            if (themeClip == null) Debug.Log("null clip");
+            if (themeClip != null)
+            {
+                audioSource.PlayOneShot(themeClip, 1.0f);
+                audioSource.loop = true;
+            }
+        }
+        onPauseGame();
     }
 
     void Update()
@@ -44,13 +64,18 @@ public class TimerCountDown : MonoBehaviour
         countDownText.text = timeLeft.ToString("0");
     }
 
-    public void pauseGame()
+    private void onPauseGame()
     {
-        Time.timeScale = 0; 
-        canvasPause.SetActive(true);
+        Time.timeScale = 0;
         pauseBtn.SetActive(false);
         planeStopTracking.planeManager.enabled = false;
         planeStopTracking.enabled = false;
+    }
+
+    public void pauseGame()
+    {
+        onPauseGame();
+        canvasPause.SetActive(true);
     }
 
     public void resumeGame()
@@ -65,12 +90,14 @@ public class TimerCountDown : MonoBehaviour
     public void restartGame()
     {
         Time.timeScale = 1;
+        //audioSource.PlayOneShot(themeClip, 1f);
         SceneManager.LoadScene("GamePlay"); // reload current scene
     }
 
     public void backMenu()
     {
         Time.timeScale = 1;
+        audioSource.Stop();
         loadScene(Constant.menu);
     }
 
@@ -78,6 +105,8 @@ public class TimerCountDown : MonoBehaviour
     {
         Time.timeScale = 0;
         canvasGameOver.SetActive(true);
+        if(!isMusicMute)
+            audioSource.PlayOneShot(loseClip, 1f);
     }
 
     public void gameCompleted()
@@ -86,6 +115,8 @@ public class TimerCountDown : MonoBehaviour
         canvasGameOver.SetActive(true);
         Text gameOver = canvasGameOver.transform.Find("GameOver").GetComponent<Text>();
         gameOver.text = Constant.gameCompleted;
+        if (!isMusicMute) 
+            audioSource.PlayOneShot(victoryClip, 1f);
     }
 
     private void loadScene(string sceneName)
