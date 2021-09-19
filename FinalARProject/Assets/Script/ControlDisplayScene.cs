@@ -35,7 +35,7 @@ public class ControlDisplayScene : MonoBehaviour
         var loadedPrefabResource = LoadPrefabFromFile(Name);
         newObject = Instantiate(loadedPrefabResource,ModelWindow) as GameObject;
         newObject.transform.localScale = scale[Name] * 0.5f;    
-        newObject.transform.localPosition = Position[Name];
+        newObject.transform.localPosition = Position[Name] + new Vector3(20f, 20f, 0f);
 
         /////////////////////////////////////////////////////////
         var filelines = Resources.Load<TextAsset>("Animal_infomation/"+Name).ToString();
@@ -70,25 +70,25 @@ public class ControlDisplayScene : MonoBehaviour
     }
 
     void setup_dict(){
-        scale.Add(      "Wolf"                  , new Vector3(300, 300, 300));
-        Position.Add(   "Wolf"                  , new Vector3(0, 0, 0));
+        scale.Add(      "Wolf"                  , new Vector3(290, 290, 290));
+        Position.Add(   "Wolf"                  , new Vector3(15, 0, 0));
         
         scale.Add(      "Stag"                  , new Vector3(70, 70, 90));
-        Position.Add(   "Stag"                  , new Vector3(0, 0, 0));
+        Position.Add(   "Stag"                  , new Vector3(5, 0, 0));
 
-        scale.Add(      "Hare"                  , new Vector3(500, 500, 500));
-        Position.Add(   "Hare"                  , new Vector3(0, 0, 0));
+        scale.Add(      "Hare"                  , new Vector3(400, 400, 400));
+        Position.Add(   "Hare"                  , new Vector3(10, 0, 0));
 
-        scale.Add(      "Rhino"                 , new Vector3(200, 200, 200));
-        Position.Add(   "Rhino"                 , new Vector3(0, 0, 0));
+        scale.Add(      "Rhino"                 , new Vector3(180, 180, 180));
+        Position.Add(   "Rhino"                 , new Vector3(20, 0, 20));
 
         scale.Add(      "AfricanGiraffe"        , new Vector3(60, 60, 60));
-        Position.Add(   "AfricanGiraffe"        , new Vector3(0, -30, 0));
+        Position.Add(   "AfricanGiraffe"        , new Vector3(10, -30, 0));
 
-        scale.Add(      "Spider"                , new Vector3(20, 20, 20));
-        Position.Add(   "Spider"                , new Vector3(0, 30, 0));
+        scale.Add(      "Spider"                , new Vector3(15, 15, 15));
+        Position.Add(   "Spider"                , new Vector3(5, 30, 0));
 
-        scale.Add(      "Tiger"                 , new Vector3(60, 60, 60));
-        Position.Add(   "Tiger"                 , new Vector3(50, 50, -100));
+        scale.Add(      "Tiger"                 , new Vector3(55, 55, 55));
+        Position.Add(   "Tiger"                 , new Vector3(50, 50, -50));
     }
 }
